@@ -79,12 +79,6 @@ func trim(s string) string {
 	return strings.TrimRight(s, "\t\n\r")
 }
 
-func words(s string) []string {
-	return strings.FieldsFunc(trim(s), func(r rune) bool {
-		return r == ' ' || r == ',' || r == '\t'
-	})
-}
-
 func parseInts(s string) []int {
 	chs := strings.FieldsFunc(trim(s), func(r rune) bool {
 		return r == ' ' || r == ',' || r == '\t'
